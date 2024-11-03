@@ -30,11 +30,11 @@ body{
 }
 
 ::-webkit-scrollbar{
-    width: 5px;
+    width: 3px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: transparent;
+    background: #d3d3d3;
 }
 
 /*=====Resuable CSS=====*/
@@ -120,7 +120,7 @@ header .image-text .header-text{
 .sidebar header .toggle{
     position: absolute;
     top: 50%;
-    right: -25px;
+    right: -15px;
     transform: translateY(-50%); 
     height: 50px;
     width: 50px;
