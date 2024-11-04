@@ -120,7 +120,7 @@ header .image-text .header-text{
 .sidebar header .toggle{
     position: absolute;
     top: 50%;
-    right: -25px;
+    right: -10px;
     transform: translateY(-50%); 
     height: 50px;
     width: 50px;
