@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*==Colours==*/
+    --body-color: #E4E9F7;
+    --sidebar-color: #fff;
+    --primary-color: #695cfe;
+    --primary-color-light: #f6f5ff;
+    --toggle-color:#DDD ;
+    --text-color:#707070 ;
+    --orange:#dd571c;
+    --red:#FF0000;
+    --grey:#f1f0f6;
+    --blue:#1775f1;
+
+
+    /*==Transition==*/
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/img/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper{
+    width: 400px;
+    background: transparent;
+    border: 2px solid var(--orange);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border-radius: 10px;
+    color: var(--text-color);
+    padding: 30px 40px;
+}
+
+.wrapper img{
+    width: 50%;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+    
+}
+
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid var(--orange);
+    border-radius: 40px;
+    font-size: 16px;
+    color:var(--text-color);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: var(--text-color);
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forget{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin: -15px 0 15px;
+}
+
+.remember-forget label input{
+    accent-color: var(--text-color);
+    margin-right: 3px;
+}
+
+.remember-forget a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: var(--orange);
+    border:none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0,0, .1);
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--sidebar-color);
+    font-weight: 600;
+}
+
+@media (max-width:520px){
+    .wrapper {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+}

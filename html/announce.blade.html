@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/announce.css">
+
+    <link rel="icon" type="image/x-icon" href="/img/logo.ico">
+
+    <!--BoxIcon-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     
+    
+    <title>Well Being Pharmacy</title>
+</head>
+<body>
+    <!--SideBar-->
+    <section id="sidebar" >
+        <a href="dashboard" class="brand"><img src="/img/biglogo.png"></a>
+        <ul class="side-menu">
+            <li>
+                <a href="dashboard.blade.html" class="active">
+                    <i class='bx bx-tachometer icon'></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <!--Daily Jobs-->
+
+            <li class="divider" data-text="Daily Jobs">Daily Jobs</li>
+            
+            <li>
+                <a href="rplog.blade.html">
+                    <i class='bx bx-list-ul icon'></i>
+                    RP Log
+                </a>
+            </li>
+
+            <li><a href="#">
+                    <i class="bx bx-window-alt icon" ></i>
+                    OTC Sales Record
+                    <i class='bx bxs-chevron-right icon-right'></i>
+                </a>
+                <ul class="side-dropdown">
+                    <li>
+                        <a href="otc/list.blade.html">
+                            <i class='bx bx-list-ul icon'></i>
+                            List
+                        </a>
+                    </li>
+                    <li>
+                        <a href="otc/submission.blade.html">
+                            <i class='bx bxs-edit-alt icon' ></i>
+                            Submission</a>
+                    </li>
+                </ul>
+            </li>
+
+            
+
+            <li><a href="#">
+                <i class='bx bx-edit icon' ></i>
+                Prescription Count
+                <i class='bx bxs-chevron-right icon-right'></i>
+            </a>
+                <ul class="side-dropdown">
+                <li>
+                    <a href="prescript/list.blade.html">
+                        <i class='bx bx-list-ul icon'></i>
+                        List
+                    </a>
+                </li>
+                <li>
+                    <a href="prescript/submission.blade.html">
+                        <i class='bx bxs-edit-alt icon' ></i>
+                        Submission</a>
+                </li>
+                </ul>
+            </li>
+
+            <li><a href="#">
+                <i class='bx bx-fridge icon'></i>
+                Fridge °C
+                <i class='bx bxs-chevron-right icon-right'></i>
+             </a>
+                <ul class="side-dropdown">
+                <li>
+                    <a href="fridge/list.blade.html">
+                        <i class='bx bx-list-ul icon'></i>
+                        Fridge List
+                    </a>
+                </li>
+                <li>
+                    <a href="fridge/add.blade.html">
+                        <i class='bx bx-task icon'></i>
+                        Add Fridge</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+                <a href="tasks.blade.html">
+                    <i class='bx bx-list-ul icon'></i>
+                    Tasks
+                </a>
+            </li>
+
+            <!--Weekly Jobs-->
+            <li class="divider" data-text="Weekly Jobs">Weekly Jobs</li>
+
+            <li><a href="#">
+                <i class='bx bx-math icon' ></i>
+                Bank In Record
+                <i class='bx bxs-chevron-right icon-right'></i>
+             </a>
+                <ul class="side-dropdown">
+                <li>
+                    <a href="bankinrecord/view.blade.html">
+                        <i class='bx bx-list-ul icon'></i>
+                        View
+                    </a>
+                </li>
+                <li>
+                    <a href="bankinrecord/submission.blade.html">
+                        <i class='bx bxs-edit-alt icon' ></i>
+                        Submission</a>
+                </li>
+              </ul>
+            </li>
+
+            <!--Management-->
+            <li class="divider" data-text="Management">Management</li>
+
+            <li>
+                <a href="announce.blade.html">
+                    <i class='bx bx-bell icon' ></i>
+                    Announcement
+                </a>
+            </li>
+
+            <li>
+                <a href="company.blade.html">
+                    <i class='bx bx-buildings icon'></i>
+                    Company
+                </a>
+            </li>
+
+            <li>
+                <a href="branch.blade.html">
+                    <i class='bx bxl-graphql icon'></i>
+                    Branch
+                </a>
+            </li>
+
+            <li>
+                <a href="management.blade.html">
+                    <i class='bx bx-library icon'></i>
+                    Management
+                </a>
+            </li>
+
+            <li>
+                <a href="staff.blade.html">
+                    <i class='bx bx-user icon'></i>
+                    Staff
+                </a>
+            </li>
+
+            <li><a href="#">
+                <i class='bx bx-book-reader icon' ></i>
+                Attendance
+                <i class='bx bxs-chevron-right icon-right'></i>
+             </a>
+                <ul class="side-dropdown">
+                <li>
+                    <a href="attendance/view.blade.html">
+                        <i class='bx bx-list-ul icon'></i>
+                        View
+                    </a>
+                </li>
+                <li>
+                    <a href="attendance/summary.blade.html">
+                        <i class='bx bx-list-ul icon'></i>
+                        Summary
+                    </a>
+                </li>
+                <li>
+                    <a href="attendance/delete.blade.html">
+                        <i class='bx bx-lock icon'></i>
+                        Delete Permission</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+                <a href="manatt.blade.html">
+                    <i class='bx bx-cog icon'></i>
+                    Manage Attendance
+                </a>
+            </li>
+
+            <li>
+                <a href="overtime.blade.html">
+                    <i class='bx bx-time-five icon'></i>
+                    Overtime
+                </a>
+            </li>
+
+            <li>
+                <a href="timeoff.blade.html">
+                    <i class='bx bx-calendar icon'></i>
+                    Time Off
+                </a>
+            </li>
+
+            <li>
+                <a href="permission.blade.html">
+                    <i class='bx bx-lock icon'></i>
+                    Permission
+                </a>
+            </li>
+
+            <li>
+                <a href="sop.blade.html">
+                    <i class='bx bx-book icon' ></i>
+                    SOP
+                </a>
+            </li>
+
+            <li>
+                <a href="applicant.blade.html">
+                    <i class='bx bxs-user-account icon'></i>
+                    Applicant
+                </a>
+            </li>
+
+            
+            <!--Staff-->
+            <li class="divider" data-text="Staff">Staff</li>
+
+            <li>
+                <a href="profile.blade.html">
+                    <i class='bx bx-user-pin icon' ></i>
+                    My Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="mytimeoff.blade.html">
+                    <i class='bx bx-calendar-star icon'></i>
+                    My Time Off
+                </a>
+            </li>
+
+            <li>
+                <a href="myot.blade.html">
+                    <i class='bx bx-time icon'></i>
+                    My Overtime
+                </a>
+            </li>
+
+
+
+        </ul>
+    </section>
+    <!--//SideBar-->
+
+
+
+    <!--NavBar-->
+    <section id="content">
+        <nav>
+            <i class='bx bx-menu-alt-left toggle-sidebar'></i>
+
+
+            <div class="right-section">
+                <a href="#" class="nav-link">
+                    <i class='bx bxs-bell-ring icon' ></i>
+                    <span class="badge">5</span>
+                </a>
+
+            <div class="profile">
+                    <img src="../../backup/download.jpg" >
+                    <ul class="profile-link">
+                        <li><a href="../../registration/register.html"><i class='bx bxs-door-open'></i></i>Logout</a></li>
+                    </ul>
+            </div>
+         </div>
+        </nav>
+    
+  
+
+    <!--Main-->
+    <main>
+        <h1 class="title">Announcement / Notification List</h1>
+        <ul class="breadcrumbs">
+            <li><a href="/dashboard">Home</a></li>
+            <li class="divider">/</li>
+            <li><a href="/dashboard" class="active">Announcement</a></li>
+        </ul>
+        
+        <div class="card">
+            <div class="card-header">
+                <form class="row g-3">
+                    <div class="col-md-2">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" name="date">
+                      </div>
+
+                      <div class="col-md-2">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" placeholder="Name">
+                      </div>
+
+                      <div class="col-md-2">
+                        <label for="type" class="form-label">Type</label>
+                        <select class="form-select" id="inlineFormSelectPref">
+                            <option selected>All</option>
+                            <option>Announcement</option>
+                            <option>Message</option>
+                          </select>
+                      </div>
+
+                </form>
+            </div>
+            <div class="card-body">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createmessage">
+                    <i class='bx bx-send'></i> Send Announcement
+                </button>
+                <br>
+                <br>
+
+                <table class="table table-bordered table-striped table-hover">
+                    <tr>
+                        <th>No</th>
+                        <th>Message</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Created At</th>
+                        <th>Acknowledged</th>
+                        <th>Action</th>
+                    </tr>
+    
+                    <tr>
+                        <td>1</td>
+                        <td>Please update your emergency contact details!</td>
+                        <td>Mario</td>
+                        <td></td>
+                        <td>2024-12-01 10:21:10</td>
+                        <td>No</td>
+                        <td>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#messageback">
+                                <i class='bx bx-mail-send'></i>
+                            </button>
+                        </td>
+                    </tr>
+            </div>
+          </div>
+
+
+          <!-- Modal - reply message back -->
+                <div class="modal fade" id="messageback" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="messageback" class="form-label">Message</label>
+                                <textarea class="form-control" id="messageback" rows="5"></textarea>
+                              </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Modal - Create new message-->
+                    <div class="modal fade" id="createmessage" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Sent Announcement</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            ...
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+        
+    </main>
+    <!--Main-->
+
+</section>
+   <!--//NavBar-->
+    <!--Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/js/announce.js"></script>
+</body>
+</html>
