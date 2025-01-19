@@ -291,7 +291,7 @@
     
   
 
-    <!--Main-->
+     <!--Main-->
     <main>
         <h1 class="title">Dashboard</h1>
         <ul class="breadcrumbs">
@@ -300,6 +300,85 @@
             <li><a href="#" class="active">Dashboard</a></li>
         </ul>
 
+        <div class="row">
+            <div class="card">
+                <img src="{{ asset('/img/malaysia.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <p>Welcome To</p>
+                <h3>WellBeing Pharmacy - Malaysia Team</h3>
+                </div>
+            </div>
+
+            <div class="card" style="max-width: 65%;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                   <br>
+                        <h4 align="center" id="date">Loading...</h4>
+                        <h4 align="center" id="time">Loading...</h4>
+
+                    <div class="qr-generator">
+                        <button class="btn btnrimary mt-4" data-bs-toggle="modal" data-bs-target="#qrModal">
+                   <!-- Display QR code on the page -->
+                   <div id="qrcode"></div>
+                   </button>
+               <!-- Button to trigger the modal, showing only QR Code text -->
+                 </div>    
+                 <br>
+
+                 <p align="center">
+                    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#qrModal">
+                        <i class='bx bx-fullscreen'></i> Full Screen
+                    </button>
+                </p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body test">
+                        <div class="d-grid gap-3 col-6 mx-auto">
+                            <button class="btn checkinout" type="button"><i class='bx bx-briefcase'></i>Clock In</button>
+                            <button class="btn checkinout" type="button"><i class='bx bx-home-smile'></i>Clock Out</button>
+                            <button class="btn checkinout" type="button"><i class='bx bx-bowl-hot'></i>Break</button>
+                          </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+           
+                
+
+
+
+           
+            
+
+          
+        </div>
+
+
+        <div class="modal fade" id="qrModal" tabindex="-1" aria-labelledby="qrModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="qrModalLabel" >QR Code</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="qr-generaor">
+                    <h1>Welcome to WellBeing Pharmacy</h1>
+                    <br>
+                    
+                    <!-- Display QR code inside modal -->
+                    <div id="modalQRCode" align="center"></div>
+                    <div class="timer" id="countdown" align="center"></div> <!-- Countdown timer display -->
+                  
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+       
 
     </main>
     <!--Main-->
@@ -309,7 +388,8 @@
     <!--Javascript-->
     <!-- QRCode.js Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="js/dashboard.js"></script>
+    <script src="{{ asset('js/dashboard.js')}}"></script>
 </body>
 </html>
