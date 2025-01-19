@@ -132,3 +132,64 @@ function generateQRCode() {
       correctLevel: QRCode.CorrectLevel.H
     });
   }
+function updateCountdown() {
+    const countdownDisplay = document.getElementById('countdown');
+
+    // Get the current time in Malaysia time
+    const now = new Date().toLocaleString("en-US", { timeZone: "Asia/Kuala_Lumpur" });
+    const currentTime = new Date(now);
+
+    // Set the target to midnight of the next day in Malaysia time
+    const nextMidnight = new Date(currentTime);
+    nextMidnight.setHours(24, 0, 0, 0); // Set to midnight
+
+    // Calculate the time difference in milliseconds
+    const timeDifference = nextMidnight - currentTime;
+
+    // Convert the difference to hours, minutes, and seconds
+    const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    // Display the countdown
+    countdownDisplay.textContent = `Time until next refresh: ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  // Initial QR code generation
+  generateQRCode();
+
+  // Refresh the QR code every day (24 hours)
+  setInterval(generateQRCode, 86400000); // 86400000ms = 24 hours
+
+  // Update countdown every second
+  setInterval(updateCountdown, 1000); // 1000ms = 1 second
+
+
+  function updateTime() {
+    let now = new Date();
+    
+    let dateOptions = { 
+        timeZone: "Asia/Kuala_Lumpur", 
+        year: "numeric", 
+        month: "long",  
+        day: "2-digit"
+    };
+    
+    let timeOptions = { 
+        timeZone: "Asia/Kuala_Lumpur", 
+        hour: "2-digit", 
+        minute: "2-digit", 
+        second: "2-digit", 
+        hour12: true
+    };
+
+    let dateString = now.toLocaleDateString("en-US", dateOptions);
+    let timeString = now.toLocaleTimeString("en-US", timeOptions);
+
+    document.getElementById("date").innerHTML = dateString;
+    document.getElementById("time").innerHTML = timeString;
+}
+
+setInterval(updateTime, 1000); //refresh every second
+window.onload = updateTime;  //when loading页面加载时执行一次
+
