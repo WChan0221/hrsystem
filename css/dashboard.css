@@ -354,6 +354,100 @@ main .breadcrumbs li a.divider{
     pointer-events: none;
 }
 
+main .card{
+    margin: 10px;
+    border-radius: 20px;
+    max-width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+
+
+
+
+main .card .card-img-top{
+    margin-top: 10px;
+    border-radius: 20px;
+    
+}
+
+main .hide{
+    margin: 20px;
+    background-color: transparent; /* 完全透明 */
+    border: 0px solid black;
+    box-shadow: none;
+}
+
+.qr-generator {
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  .qr-generator h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .qr-generator p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+  }
+
+  #qrcode {
+    margin-top: 5px;
+
+  }
+
+  .timer {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+
+
+
+.checkinout{
+
+   margin: 20px 20px 20px -100px;
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+   width: 170%;
+   height: 100%;
+   font-size: 28px;
+   gap: 8px;
+  }
+
+  .checkinout:hover{
+    background:var(--primary-color);
+    font-size: 35px;
+    transition: var(--tran-05);
+    color: var(--primary-color-light);
+    align-items: center; /* 垂直居中 */
+    justify-content: center;
+    gap: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
+
+
+.modal-body{
+    background: url(/img/testbackground.jpg) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255, 255, 255, 0.5); /* 透明白色背景 */
+    background-blend-mode: overlay; 
+  }
+
+.timer{
+    color: var(--primary-color-light);
+}
+
+
 /* //Main */
 
 /* //Content */
